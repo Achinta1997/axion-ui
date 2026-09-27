@@ -8,4 +8,10 @@ stages:
     displayName: Build UI
     jobs:
       - job: buildJob
-        
+        steps:
+        - task: Docker@2
+          inputs:
+            containerRegistry: 'axion'
+            repository: 'achinta1/axion'
+            command: 'buildAndPush'
+            Dockerfile: '**/Dockerfile'

@@ -11,7 +11,7 @@ env:
 jobs:
   build-and-push:
     name: Build & Push to Docker Hub
-    runs-on: ubuntu-latest
+    runs-on: mini
 
     steps:
       - name: Checkout code
